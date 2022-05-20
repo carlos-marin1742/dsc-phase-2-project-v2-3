@@ -39,9 +39,9 @@ One fix is the removal of outliers. Well, how many outliers are there in the dat
 
 To see outliers use what’s known as boxplots, where everything outside of the lines and boxes, are considered outliers. They affect our model because they are considered abnormal values.
 
-![](Renovated-Pretrimmed Boxplot.png)
+![renovated untrimmed boxplot](Renovated_Trimmed_Boxplot.png)
 
-![](Non-Renovated Boxplot pretrimmed.png)
+![nonrenovated pretrimmed boxplot](Non-Renovated_Boxplot_pretrimmed.png)
 
 This is what removal of outliers looks like
 
