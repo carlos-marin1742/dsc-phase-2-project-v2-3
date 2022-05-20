@@ -27,24 +27,33 @@ Post-trimming Update Formula
 
 ## Results
 After running the Multiple linear regression model, first thing we notice is that bedrooms and square footage apart from basement have a negative correlation on price, after renovations We can see apart of number of bedrooms, and square foot above, there is a greater impact on price when it comes to bathrooms and square foot of living area. The negative values in bedrooms and squarefoot above area indicates as price increases, they share negative correlation (”as one goes up the other goes down”).
+
 ![](./Non-Renovated OLS Analysis)
+
 ![](./Renovated OLS Analysis)
+
 To see outliers use what’s known as boxplots, where everything outside of the lines and boxes, are considered outliers. They affect our model because they are considered abnormal values.
 
 Post model evaluation, we see that some coefficients are not really relevant. The most possible cause is due to outliers (or abnormal values).
 One fix is the removal of outliers. Well, how many outliers are there in the data set? Well let’s look...
 
 To see outliers use what’s known as boxplots, where everything outside of the lines and boxes, are considered outliers. They affect our model because they are considered abnormal values.
+
 ![](./Renovated-Pretrimmed Boxplot)
+
 ![](./Non-Renovated Boxplot pretrimmed.)
 
 This is what removal of outliers looks like
+
 ![](./Renovated Trimmed Boxplot)
+
 ![](./Non-renovated boxplot trimmed)
 
 Post Trimming the new shape for the renovated data set is 644 rows (down from 744), 5 columns.
-Post trimming new shape for non-renovated data set is 3648 rows (down from 3842), 5 columns
+Post trimming new shape for non-renovated data set is 3648 rows (down from 3842), 5 columns.
+
 ![](./Renovated Trimmed)
+
 ![](./Non-renovated Trimmed)
 
 
