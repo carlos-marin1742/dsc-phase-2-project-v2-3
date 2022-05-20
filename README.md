@@ -2,7 +2,7 @@
 
 
 ## Background
-Every Year, Americans renovate their home so when it comes time to sell, they can best the return. I create two multiple linear regression models based on whether they were renovated or not.
+Every Year, Americans renovate their home so when it comes time to sell, they can get best return. I create two multiple linear regression models based on whether they were renovated or not.
 
 
 ## Business Problem
@@ -18,26 +18,43 @@ Both have 5 rows
 
 
 ## Methods
-First we create single linear models by coefficient to price
-Then we compare and create the multiple linear regression to see how the coefficient changes.
-Data is trimmed to increase R squared and the overall model accuracy at the end. 
-
+First we sepearte data sets by whether they were renovated or not.
+Data Processing occurs
+Perform Multiple Linear Regression identify coefficients
+Data trimmed to remove unnecessary outliers
+Post-trimming Update Formula
 
 
 ## Results
-Results show lots of variability in data. High RMSE, high MAE. Model score accuracy is low. 
-![](./renovated actual vs predicted)
-![](./NR actual vs predicted)
+After running the Multiple linear regression model, first thing we notice is that bedrooms and square footage apart from basement have a negative correlation on price, after renovations We can see apart of number of bedrooms, and square foot above, there is a greater impact on price when it comes to bathrooms and square foot of living area. The negative values in bedrooms and squarefoot above area indicates as price increases, they share negative correlation (”as one goes up the other goes down”).
+![](./Non-Renovated OLS Analysis)
+![](./Renovated OLS Analysis)
+To see outliers use what’s known as boxplots, where everything outside of the lines and boxes, are considered outliers. They affect our model because they are considered abnormal values.
+
+Post model evaluation, we see that some coefficients are not really relevant. The most possible cause is due to outliers (or abnormal values).
+One fix is the removal of outliers. Well, how many outliers are there in the data set? Well let’s look...
+
+To see outliers use what’s known as boxplots, where everything outside of the lines and boxes, are considered outliers. They affect our model because they are considered abnormal values.
+![](./Renovated-Pretrimmed Boxplot)
+![](./Non-Renovated Boxplot pretrimmed.)
+
+This is what removal of outliers looks like
+![](./Renovated Trimmed Boxplot)
+![](./Non-renovated boxplot trimmed)
+
+Post Trimming the new shape for the renovated data set is 644 rows (down from 744), 5 columns.
+Post trimming new shape for non-renovated data set is 3648 rows (down from 3842), 5 columns
+![](./Renovated Trimmed)
+![](./Non-renovated Trimmed)
 
 
 ## Conclusions
-First I evaluated how each coefficient (bedroom, bathroom, square foot living area, square foot above area) when renovated how they affect pricing of a home. While trimming the data did lower R squared, but it is known that the model accuracy score at the end would be significantly lower if not trimmed. The plot would now show a non linear trend at all if not trimmed. Trimming data to remove outliers increased model score accuracy at the end. Possibly more (or less) trimming could be done, to increase the model score accuracy seen at the the end.
-
+After modeling the multiple linear regression model. We see both negative coefficients (areas renovated and areas not renovated). While both do share negative coefficients with bedrooms and square footage apart from basement. In the renovated data set, the positive coefficients (bathrooms and square footage of living area), quickly negate the negative affects and greatly impact price in comparison on non-renovated houses.
 
 
 
 ## Next Steps 
 
-1) Evaluate methods to increase model accuracy
-2) evaluate trimming (decrease/increase trimming) see how this affects R squared and model accuracy score at the end.
-3) evluate what causes negative correlation in multiple linear regression
+1) Evaluate renovated homes by decade renovated
+2) Evaluate homes based on what year they were built (by decade built) and comparing whether renovation is necessary.
+3) Evaluate what other areas of home can greatly impact price for renovated and non-renovated homes (e.g., kitchen, garage, etc.)
